@@ -19,5 +19,6 @@ def verify_token(token:str):
             key = Settings.JWT_SECRET_KEY,
             algorithms=[Settings.JWT_ALGORITH]
         )
+        return payload
     except JWTError:
         return None
